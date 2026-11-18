@@ -1,0 +1,126 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "almond",
+  "name": "Indiflows Docs",
+  "description": "User Guide for AI-Powered Voice Dictation, Typing & Real-Time Translation on Windows Desktop & Android Mobile Keyboard.",
+  "colors": {
+    "primary": "#2563EB",
+    "light": "#3B82F6",
+    "dark": "#1D4ED8"
+  },
+  "favicon": "/favicon.png",
+  "icons": {
+    "library": "lucide"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view"
+    ]
+  },
+  "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Home",
+          "icon": "house",
+          "href": "/"
+        },
+        {
+          "anchor": "Windows Desktop",
+          "icon": "monitor",
+          "href": "/windows/installation"
+        },
+        {
+          "anchor": "Android Mobile Keyboard",
+          "icon": "smartphone",
+          "href": "/mobile/installation-setup"
+        }
+      ]
+    },
+    "directory": "card",
+    "groups": [
+      {
+        "group": "Getting Started",
+        "icon": "sparkles",
+        "expanded": true,
+        "pages": [
+          "getting-started/overview",
+          "getting-started/quickstart",
+          "getting-started/languages"
+        ]
+      },
+      {
+        "group": "Windows Desktop Guide",
+        "icon": "monitor",
+        "expanded": true,
+        "pages": [
+          "windows/installation",
+          "windows/floating-pill",
+          "windows/voice-dictation",
+          "windows/font-encodings",
+          "windows/translation-styles",
+          "windows/snippets-dictionary",
+          "windows/settings-optimization",
+          "windows/referrals",
+          "windows/plans-billing"
+        ]
+      },
+      {
+        "group": "Android Keyboard & App Guide",
+        "icon": "smartphone",
+        "expanded": true,
+        "pages": [
+          "mobile/installation-setup",
+          "mobile/keyboard-setup",
+          "mobile/app-features",
+          "mobile/voice-typing-guide",
+          "mobile/voice-typing",
+          "mobile/language-translation",
+          "mobile/vocabulary-snippets",
+          "mobile/account-plans"
+        ]
+      },
+      {
+        "group": "Troubleshooting & FAQs",
+        "icon": "circle-help",
+        "expanded": true,
+        "pages": [
+          "troubleshooting/windows-troubleshooting",
+          "troubleshooting/mobile-troubleshooting",
+          "troubleshooting/faq"
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/logo.png",
+    "dark": "/logo/logo.png",
+    "href": "https://docs.indiflows.tech"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Main Website",
+        "href": "https://indiflows.tech"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "indiflows.tech",
+      "href": "https://indiflows.tech"
+    }
+  },
+  "seo": {
+    "indexing": "all"
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com",
+      "x": "https://x.com"
+    }
+  }
+}

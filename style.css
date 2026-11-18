@@ -1,0 +1,447 @@
+:root {
+  --default-border-color: var(--gray-200);
+  --content-width: 64rem !important;
+}
+
+.dark {
+  --default-border-color: var(--gray-800);
+}
+
+/* =========================================================================
+   1. BRAND LOGO - STRICTLY CONSTRAINED (Single Logo Only)
+   ========================================================================= */
+img[src*="/logo/"],
+img[src*="logo.png"] {
+  height: 28px !important;
+  max-height: 28px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+/* =========================================================================
+   2. EXPANDED CONTENT WIDTH & REDUCED SIDE GAPS
+   ========================================================================= */
+/* Ensure full-width base structure */
+#root,
+body,
+html,
+main,
+div[data-docs-page],
+div[class*="relative"][class*="flex"][class*="min-h-screen"],
+div[class*="flex-1"][class*="min-w-0"] {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Content container flex wrapper - reduce side gaps and center wide content */
+#content-container {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+#content-container > div {
+  max-width: 92rem !important; /* ~1470px wide total spread */
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+}
+
+/* Enlarge main content area width to eliminate cramped narrow column */
+#content-area,
+div[data-layout-item="content"],
+div[class*="max-w-(--content-width"],
+div[class*="contain-[inline-size]"] {
+  max-width: 64rem !important; /* ~1024px wide text column */
+  width: 100% !important;
+}
+
+.prose,
+article,
+div.mdx-content,
+div[class*="max-w-prose"],
+div[class*="max-w-3xl"],
+div[class*="max-w-2xl"] {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Card groups and grids take full available width */
+div[data-component="card-group"],
+.card-group,
+div[class*="grid-cols-"],
+div[class*="CardGroup"] {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* =========================================================================
+   3. ENLARGED TYPOGRAPHY (Crystal-clear, comfortable reading size)
+   ========================================================================= */
+/* Main page title */
+#page-title,
+h1#page-title {
+  font-size: 2.5rem !important; /* ~40px */
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.25 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Page subtitle / description under title */
+#header .prose p,
+#header p,
+header .prose p {
+  font-size: 1.2rem !important; /* ~19px */
+  line-height: 1.65 !important;
+}
+
+/* MDX Headings */
+.mdx-content h1,
+.prose h1,
+article h1 {
+  font-size: 2.25rem !important; /* ~36px */
+  font-weight: 750 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.025em !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.mdx-content h2,
+.prose h2,
+article h2 {
+  font-size: 1.7rem !important; /* ~27px */
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.02em !important;
+  margin-top: 2.25rem !important;
+  margin-bottom: 0.85rem !important;
+  padding-bottom: 0.4rem !important;
+  border-bottom: 1px solid rgba(125, 125, 125, 0.15) !important;
+}
+
+.mdx-content h3,
+.prose h3,
+article h3 {
+  font-size: 1.35rem !important; /* ~21.5px */
+  font-weight: 650 !important;
+  line-height: 1.4 !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.6rem !important;
+}
+
+/* Body paragraphs and spans (Mintlify renders <span data-as="p">) */
+.mdx-content p,
+.mdx-content span[data-as="p"],
+.prose p,
+.prose span[data-as="p"],
+article p,
+article span[data-as="p"],
+[data-as="p"] {
+  font-size: 1.125rem !important; /* 18px! Large and comfortable */
+  line-height: 1.85 !important;
+  letter-spacing: -0.01em !important;
+  margin-top: 0.85rem !important;
+  margin-bottom: 0.85rem !important;
+}
+
+/* Lists and list items */
+.mdx-content ul,
+.mdx-content ol,
+.prose ul,
+.prose ol,
+article ul,
+article ol {
+  font-size: 1.125rem !important;
+  line-height: 1.85 !important;
+  margin-top: 0.85rem !important;
+  margin-bottom: 0.85rem !important;
+}
+
+.mdx-content li,
+.prose li,
+article li {
+  font-size: 1.125rem !important;
+  line-height: 1.85 !important;
+  margin-top: 0.45rem !important;
+  margin-bottom: 0.45rem !important;
+}
+
+/* Cards */
+[class*="Card"] h3,
+[class*="card"] h3,
+.card-title {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+}
+
+[class*="Card"] p,
+[class*="card"] p,
+.card-description {
+  font-size: 1.05rem !important;
+  line-height: 1.65 !important;
+}
+
+/* Tables */
+table {
+  width: 100% !important;
+  font-size: 1.05rem !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+table th {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  padding: 0.85rem 1.1rem !important;
+}
+
+table td {
+  font-size: 1.05rem !important;
+  padding: 0.85rem 1.1rem !important;
+  line-height: 1.65 !important;
+}
+
+/* Callouts / Alerts (Tip, Note, Info, Warning) */
+div[data-component="callout"],
+div[class*="callout"],
+div[class*="Callout"] {
+  font-size: 1.1rem !important;
+  line-height: 1.75 !important;
+  padding: 1.1rem 1.35rem !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+div[data-component="callout"] p,
+div[class*="callout"] p,
+div[class*="Callout"] p,
+div[data-component="callout"] span[data-as="p"] {
+  font-size: 1.1rem !important;
+  line-height: 1.75 !important;
+}
+
+/* Table of contents ("On this page") */
+#table-of-contents,
+#table-of-contents-layout,
+.toc {
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+}
+
+/* =========================================================================
+   4. SIDEBAR STYLING - ACTIVE ITEM BOLD & PROMINENT HIGHLIGHT
+   ========================================================================= */
+#sidebar .nav-dropdown-trigger {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding-left: 0.375rem;
+}
+
+#sidebar .nav-dropdown-trigger:hover {
+  background-color: rgb(0 0 0 / 0.04) !important;
+}
+
+.dark #sidebar .nav-dropdown-trigger:hover {
+  background-color: rgb(255 255 255 / 0.06) !important;
+}
+
+.nav-dropdown-content .nav-dropdown-item-description {
+  display: none !important;
+}
+
+/* =========================================================================
+   4A. NORMAL / INACTIVE SIDEBAR ITEMS - MEDIUM WEIGHT & SHARP LEGIBILITY
+   ========================================================================= */
+/* Unselected Sidebar Links - Crisp Medium weight (not faint or thin) */
+#sidebar-content li > a,
+#sidebar-content li > a span,
+nav[data-layout-item="sidebar"] li > a,
+nav[data-layout-item="sidebar"] li > a span,
+#sidebar-content a.nav-anchor,
+#sidebar-content a.nav-anchor span,
+nav[data-layout-item="sidebar"] a.nav-anchor,
+nav[data-layout-item="sidebar"] a.nav-anchor span {
+  font-weight: 500 !important; /* Medium weight - eliminates washed-out thin text */
+  font-size: 0.9375rem !important; /* ~15px clear readable size */
+  color: #374151 !important; /* Rich graphite slate text */
+  line-height: 1.5 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.dark #sidebar-content li > a,
+.dark #sidebar-content li > a span,
+.dark nav[data-layout-item="sidebar"] li > a,
+.dark nav[data-layout-item="sidebar"] li > a span,
+.dark #sidebar-content a.nav-anchor,
+.dark #sidebar-content a.nav-anchor span,
+.dark nav[data-layout-item="sidebar"] a.nav-anchor,
+.dark nav[data-layout-item="sidebar"] a.nav-anchor span {
+  color: #cbd5e1 !important; /* Clean slate-300 in dark mode - high contrast */
+}
+
+/* Hover effect on unselected sidebar items */
+#sidebar-content li:not([data-active]):not([data-active-nav-item]) > a:hover,
+#sidebar-content li:not([data-active]):not([data-active-nav-item]) > a:hover span,
+nav[data-layout-item="sidebar"] li:not([data-active]):not([data-active-nav-item]) > a:hover,
+nav[data-layout-item="sidebar"] li:not([data-active]):not([data-active-nav-item]) > a:hover span,
+#sidebar-content a.nav-anchor:not([aria-current="page"]):hover,
+#sidebar-content a.nav-anchor:not([aria-current="page"]):hover span {
+  color: #0f172a !important; /* Slate-900 on hover */
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+.dark #sidebar-content li:not([data-active]):not([data-active-nav-item]) > a:hover,
+.dark #sidebar-content li:not([data-active]):not([data-active-nav-item]) > a:hover span,
+.dark nav[data-layout-item="sidebar"] li:not([data-active]):not([data-active-nav-item]) > a:hover,
+.dark nav[data-layout-item="sidebar"] li:not([data-active]):not([data-active-nav-item]) > a:hover span,
+.dark #sidebar-content a.nav-anchor:not([aria-current="page"]):hover,
+.dark #sidebar-content a.nav-anchor:not([aria-current="page"]):hover span {
+  color: #f8fafc !important; /* Crisp white on hover */
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Sidebar Category / Section Headers (Getting Started, Windows Desktop Guide, etc.) */
+.sidebar-group-header,
+#sidebar-content .sidebar-group-header,
+nav[data-layout-item="sidebar"] .sidebar-group-header,
+.sidebar-title,
+h3.sidebar-title,
+h3.sidebar-title span {
+  font-size: 0.95rem !important; /* Medium category font size */
+  font-weight: 600 !important; /* Medium semi-bold weight */
+  color: #1e293b !important; /* Rich slate text */
+  letter-spacing: -0.01em !important;
+  line-height: 1.4 !important;
+}
+
+.dark .sidebar-group-header,
+.dark #sidebar-content .sidebar-group-header,
+.dark nav[data-layout-item="sidebar"] .sidebar-group-header,
+.dark .sidebar-title,
+.dark h3.sidebar-title,
+.dark h3.sidebar-title span {
+  color: #e2e8f0 !important; /* Slate-200 in dark mode */
+}
+
+/* Category header icons - proportional medium size */
+.sidebar-group-header .sidebar-group-icon,
+#sidebar-content .sidebar-group-header svg,
+nav[data-layout-item="sidebar"] .sidebar-group-header svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  opacity: 0.85 !important;
+}
+
+/* =========================================================================
+   4B. ACTIVE / SELECTED SIDEBAR ITEM - BLUE HIGHLIGHT & SEMI-BOLD TEXT
+   ========================================================================= */
+#sidebar-content li[data-active] > a,
+#sidebar-content li[data-active-nav-item] > a,
+#sidebar-content li[data-active="true"] > a,
+#sidebar-content a[class*="text-primary"],
+#sidebar-content a[class*="bg-primary"],
+#sidebar-content a[class*="text-shadow"],
+#sidebar-content a[aria-current="page"],
+nav[data-layout-item="sidebar"] li[data-active] > a,
+nav[data-layout-item="sidebar"] li[data-active-nav-item] > a,
+nav[data-layout-item="sidebar"] a[class*="text-primary"],
+nav[data-layout-item="sidebar"] a[class*="bg-primary"],
+nav[data-layout-item="sidebar"] a[class*="text-shadow"],
+nav[data-layout-item="sidebar"] a[aria-current="page"] {
+  font-weight: 650 !important;
+  color: #2563eb !important;
+  background-color: rgba(37, 99, 235, 0.08) !important;
+  border-left: 3.5px solid #2563eb !important;
+  border-radius: 0.5rem !important;
+  text-shadow: none !important;
+}
+
+.dark #sidebar-content li[data-active] > a,
+.dark #sidebar-content li[data-active-nav-item] > a,
+.dark #sidebar-content li[data-active="true"] > a,
+.dark #sidebar-content a[class*="text-primary"],
+.dark #sidebar-content a[class*="bg-primary"],
+.dark #sidebar-content a[class*="text-shadow"],
+.dark #sidebar-content a[aria-current="page"],
+.dark nav[data-layout-item="sidebar"] li[data-active] > a,
+.dark nav[data-layout-item="sidebar"] li[data-active-nav-item] > a,
+.dark nav[data-layout-item="sidebar"] a[class*="text-primary"],
+.dark nav[data-layout-item="sidebar"] a[class*="bg-primary"],
+.dark nav[data-layout-item="sidebar"] a[class*="text-shadow"],
+.dark nav[data-layout-item="sidebar"] a[aria-current="page"] {
+  font-weight: 650 !important;
+  color: #3b82f6 !important;
+  background-color: rgba(59, 130, 246, 0.14) !important;
+  border-left: 3.5px solid #3b82f6 !important;
+  text-shadow: none !important;
+}
+
+/* Ensure inner text spans in active items are cleanly semi-bold and blue */
+#sidebar-content li[data-active] > a span,
+#sidebar-content li[data-active-nav-item] > a span,
+#sidebar-content li[data-active="true"] > a span,
+#sidebar-content a[class*="text-primary"] span,
+#sidebar-content a[class*="bg-primary"] span,
+#sidebar-content a[class*="text-shadow"] span,
+#sidebar-content a[aria-current="page"] span,
+nav[data-layout-item="sidebar"] li[data-active] > a span,
+nav[data-layout-item="sidebar"] li[data-active-nav-item] > a span,
+nav[data-layout-item="sidebar"] a[class*="text-primary"] span,
+nav[data-layout-item="sidebar"] a[class*="bg-primary"] span,
+nav[data-layout-item="sidebar"] a[class*="text-shadow"] span,
+nav[data-layout-item="sidebar"] a[aria-current="page"] span {
+  font-weight: 650 !important;
+  color: #2563eb !important;
+}
+
+.dark #sidebar-content li[data-active] > a span,
+.dark #sidebar-content li[data-active-nav-item] > a span,
+.dark #sidebar-content li[data-active="true"] > a span,
+.dark #sidebar-content a[class*="text-primary"] span,
+.dark #sidebar-content a[class*="bg-primary"] span,
+.dark #sidebar-content a[class*="text-shadow"] span,
+.dark #sidebar-content a[aria-current="page"] span,
+.dark nav[data-layout-item="sidebar"] li[data-active] > a span,
+.dark nav[data-layout-item="sidebar"] li[data-active-nav-item] > a span,
+.dark nav[data-layout-item="sidebar"] a[class*="text-primary"] span,
+.dark nav[data-layout-item="sidebar"] a[class*="bg-primary"] span,
+.dark nav[data-layout-item="sidebar"] a[class*="text-shadow"] span,
+.dark nav[data-layout-item="sidebar"] a[aria-current="page"] span {
+  font-weight: 650 !important;
+  color: #3b82f6 !important;
+}
+
+/* Top-level Navigation Anchors (Home, Windows Desktop, Android Keyboard) */
+#sidebar-content a.nav-anchor[aria-current="page"],
+#sidebar-content a.nav-anchor.active,
+#sidebar-content a.nav-anchor[class*="text-primary"],
+#sidebar-content a.nav-anchor[data-active="true"],
+nav[data-layout-item="sidebar"] a.nav-anchor[aria-current="page"],
+nav[data-layout-item="sidebar"] a.nav-anchor.active,
+nav[data-layout-item="sidebar"] a.nav-anchor[class*="text-primary"],
+nav[data-layout-item="sidebar"] a.nav-anchor[data-active="true"] {
+  font-weight: 700 !important;
+  color: #2563eb !important;
+}
+
+.dark #sidebar-content a.nav-anchor[aria-current="page"],
+.dark #sidebar-content a.nav-anchor.active,
+.dark #sidebar-content a.nav-anchor[class*="text-primary"],
+.dark #sidebar-content a.nav-anchor[data-active="true"],
+.dark nav[data-layout-item="sidebar"] a.nav-anchor[aria-current="page"],
+.dark nav[data-layout-item="sidebar"] a.nav-anchor.active,
+.dark nav[data-layout-item="sidebar"] a.nav-anchor[class*="text-primary"],
+.dark nav[data-layout-item="sidebar"] a.nav-anchor[data-active="true"] {
+  font-weight: 700 !important;
+  color: #60a5fa !important;
+}
+
+#sidebar-content a.nav-anchor[aria-current="page"] span,
+#sidebar-content a.nav-anchor[class*="text-primary"] span,
+.dark #sidebar-content a.nav-anchor[aria-current="page"] span,
+.dark #sidebar-content a.nav-anchor[class*="text-primary"] span {
+  font-weight: 700 !important;
+}

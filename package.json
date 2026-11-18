@@ -1,0 +1,14 @@
+{
+  "name": "indiflows-docs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "mintlify dev",
+    "build": "mintlify validate",
+    "validate": "mintlify validate"
+  },
+  "devDependencies": {
+    "mintlify": "^4.2.687"
+  }
+}
+
